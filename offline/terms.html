@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - World Premium Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .premium-shadow {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-shine {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .premium-title {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #667eea, #764ba2, transparent);
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+    <!-- Professional Navigation -->
+    <nav class="relative z-10 bg-white/95 backdrop-blur-xl shadow-xl border-b border-gradient-to-r from-blue-500/20 to-purple-500/20 sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-crown text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold premium-title text-shine">World Premium Blog</h1>
+                        <p class="text-xs text-gray-500 font-medium">Elite Content Platform</p>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium py-2">Home</a>
+                    <a href="blog.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium py-2">Premium Blog</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium py-2">About</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium py-2">Contact</a>
+                </div>
+
+                <button class="lg:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+
+            <div id="mobileMenu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium py-2 px-4 rounded-lg hover:bg-gray-50">Home</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium py-2 px-4 rounded-lg hover:bg-gray-50">Premium Blog</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium py-2 px-4 rounded-lg hover:bg-gray-50">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium py-2 px-4 rounded-lg hover:bg-gray-50">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Terms of Service Hero -->
+    <section class="relative z-10 hero-gradient text-white py-32">
+        <div class="relative max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <span class="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-sm font-bold tracking-wide">
+                    <i class="fas fa-gavel text-yellow-300 mr-2"></i>
+                    LEGAL TERMS
+                </span>
+            </div>
+
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 premium-title leading-tight">
+                Terms of
+                <span class="block text-shine">Service</span>
+                <span class="block">World Premium Blog</span>
+            </h1>
+
+            <p class="text-2xl mb-12 max-w-4xl mx-auto leading-relaxed opacity-90">
+                Please read these terms carefully before using our premium platform and services.
+            </p>
+
+            <div class="flex justify-center">
+                <div class="glass-card px-8 py-4 rounded-2xl">
+                    <p class="text-lg">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Last Updated: October 2023
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms of Service Content -->
+    <section class="relative z-10 py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="glass-card p-8 lg:p-12 rounded-3xl premium-shadow">
+                <h2 class="text-3xl font-bold mb-8 premium-title text-shine">Terms of Service</h2>
+
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                        These Terms of Service ("Terms") govern your access to and use of World Premium Blog, including our website, premium content platform, and related services. By accessing or using our services, you agree to be bound by these Terms.
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Acceptance of Terms</h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        By creating an account, accessing our premium content, or using any of our services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, please do not use our services.
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Description of Service</h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        World Premium Blog is an elite content platform that provides:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 leading-relaxed mb-6 space-y-2">
+                        <li>Premium articles and exclusive content</li>
+                        <li>Elite membership tiers with varying access levels</li>
+                        <li>Newsletter and premium insights</li>
+                        <li>Community features and networking opportunities</li>
+                        <li>Customer support and technical assistance</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">User Accounts</h3>
+
+                    <h4 class="text-xl font-semibold mb-3">Account Registration</h4>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        To access premium features, you must register for an account. You agree to:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 leading-relaxed mb-6 space-y-2">
+                        <li>Provide accurate and complete information</li>
+                        <li>Maintain the security of your account credentials</li>
+                        <li>Accept responsibility for all activities under your account</li>
+                        <li>Notify us immediately of any unauthorized use</li>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold mb-3">Account Termination</h4>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        We reserve the right to suspend or terminate accounts that violate these Terms or engage in prohibited activities. Upon termination, your access to premium content will be immediately revoked.
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Membership and Billing</h3>
+
+                    <h4 class="text-xl font-semibold mb-3">Subscription Plans</h4>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        We offer different membership tiers with varying features and pricing:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 leading-relaxed mb-6 space-y-2">
+                        <li><strong>Basic Elite:</strong> $9/month - Ad-free reading and basic content access</li>
+                        <li><strong>Premium Elite:</strong> $29/month - All Basic features plus exclusive content and early access</li>
+                        <li><strong>Enterprise:</strong> Custom pricing - Tailored solutions for organizations</li>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold mb-3">Payment and Billing</h4>
+                    <ul class="list-disc list-inside text-gray-600 leading-relaxed mb-6 space-y-2">
+                        <li>Subscriptions are billed monthly or annually based on your selection</li>
+                        <li>Auto-renewal is enabled unless cancelled</li>
+                        <li>Payment is processed securely through our payment partners</li>
+                        <li>Refunds are available within 30 days of purchase</li>
+                        <li>Price changes will be communicated 30 days in advance</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Content Usage</h3>
+
+                    <h4 class="text-xl font-semibold mb-3">License Grant</h4>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        We grant you a limited, non-exclusive, non-transferable license to access and use our content for personal, non-commercial purposes. This license is subject to these Terms and your membership level.
+                    </p>
+
+                    <h4 class="text-xl font-semibold mb-3">Prohibited Uses</h4>
+                    <p class="text-gray-600 leading-relaxed mb-4">You may not:</p>
+                    <ul class="list-disc list-inside text-gray-600 leading-relaxed mb-6 space-y-2">
+                        <li>Copy, distribute, or reproduce content without permission</li>
+                        <li>Share your account credentials with others</li>
+                        <li>Use content for commercial purposes without authorization</li>
+                        <li>Modify, adapt, or create derivative works</li>
+                        <li>Remove watermarks, copyright notices, or attribution</li>
+                        <li>Use automated tools to access or download content</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">User Conduct</h3>
+
+                    <h4 class="text-xl font-semibold mb-3">Acceptable Use</h4>
+                    <p class="text-gray-600 leading-relaxed mb-4">You agree to use our platform responsibly and:</p>
+                    <ul class="list-disc list-inside text-gray-600 leading-relaxed mb-6 space-y-2">
+                        <li>Respect the rights of other users and content creators</li>
+                        <li>Maintain professional conduct in all interactions</li>
+                        <li>Comply with applicable laws and regulations</li>
+                        <li>Protect the security and integrity of our platform</li>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold mb-3">Prohibited Activities</h4>
+                    <p class="text-gray-600 leading-relaxed mb-4">The following activities are strictly prohibited:</p>
+                    <ul class="list-disc list-inside text-gray-600 leading-relaxed mb-6 space-y-2">
+                        <li>Harassment, abuse, or threats against users or staff</li>
+                        <li>Spam, unsolicited advertising, or promotional content</li>
+                        <li>Impersonation of other individuals or entities</li>
+                        <li>Distribution of malware, viruses, or harmful code</li>
+                        <li>Attempting to gain unauthorized access to systems</li>
+                        <li>Violating intellectual property rights</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Intellectual Property</h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        All content on World Premium Blog, including text, images, graphics, logos, and software, is protected by intellectual property laws. Our content is original work created by our team and contributors.
+                    </p>
+
+                    <h4 class="text-xl font-semibold mb-3">Copyright</h4>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        All content is copyrighted © 2023 World Premium Blog. Unauthorized use, reproduction, or distribution of our content is strictly prohibited and may result in legal action.
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Disclaimer of Warranties</h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Our services are provided "as is" and "as available" without warranties of any kind, either express or implied. We do not guarantee that our services will be uninterrupted, error-free, or meet your specific requirements.
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Limitation of Liability</h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        To the maximum extent permitted by law, World Premium Blog shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Indemnification</h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        You agree to indemnify and hold harmless World Premium Blog, its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from your use of our services or violation of these Terms.
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Governing Law</h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        These Terms shall be governed by and construed in accordance with applicable international laws and regulations. Any disputes arising from these Terms or your use of our services shall be resolved through binding arbitration.
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Changes to Terms</h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting on our website. Your continued use of our services after changes are posted constitutes acceptance of the modified Terms.
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Severability</h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        If any provision of these Terms is found to be unenforceable or invalid, the remaining provisions shall remain in full force and effect.
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4 premium-title">Contact Information</h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        If you have any questions about these Terms of Service, please contact us:
+                    </p>
+
+                    <div class="bg-gray-50 p-6 rounded-2xl mb-8">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-envelope text-blue-500"></i>
+                                <span class="text-gray-700 font-semibold">Email:</span>
+                                <a href="mailto:huzaifakarim612@gmail.com" class="text-blue-600 hover:text-purple-600 transition-colors duration-300">
+                                    huzaifakarim612@gmail.com
+                                </a>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-clock text-green-500"></i>
+                                <span class="text-gray-700 font-semibold">Response Time:</span>
+                                <span class="text-gray-600">Within 24 hours</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-headset text-purple-500"></i>
+                                <span class="text-gray-700 font-semibold">Support:</span>
+                                <span class="text-gray-600">Premium Member Priority Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-200 pt-8 mt-8">
+                        <p class="text-gray-500 text-sm text-center">
+                            These Terms of Service were last updated on October 2023.
+                        </p>
+                        <p class="text-gray-500 text-sm text-center mt-2">
+                            World Premium Blog - Elite Content Platform
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-2xl">
+                            <i class="fas fa-crown text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold premium-title">World Premium Blog</h3>
+                            <p class="text-gray-300 font-medium">Elite Content Platform</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-8 max-w-md text-lg leading-relaxed">
+                        The world's premier destination for ultra-premium content, exclusive insights, and elite knowledge.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-xl mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-all duration-300">Home</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white transition-all duration-300">Premium Blog</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-all duration-300">About</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-all duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-xl mb-6">Legal</h4>
+                    <ul class="space-y-4">
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition-all duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition-all duration-300">Terms of Service</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-all duration-300">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 pt-12 text-center">
+                <p class="text-gray-400 text-lg">
+                    &copy; 2023 World Premium Blog. All rights reserved. | Elite Content Platform
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
